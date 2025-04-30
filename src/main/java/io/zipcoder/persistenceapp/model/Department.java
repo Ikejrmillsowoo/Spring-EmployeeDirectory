@@ -13,10 +13,10 @@ public class Department {
     @Column(name = "DPT_NAME")
     private String dptName;
     @Column(name = "DPT_MANAGER")
-    private String dptManager;
+    private Long dptManagerId;
 
-    public Department(String dptManager, String dptName, Long dptNumber) {
-        this.dptManager = dptManager;
+    public Department(Long dptManagerId, String dptName, Long dptNumber) {
+        this.dptManagerId = dptManagerId;
         this.dptName = dptName;
         this.dptNumber = dptNumber;
     }
@@ -37,11 +37,11 @@ public class Department {
         this.dptName = dptName;
     }
 
-    public String getDptManager() {
-        return dptManager;
+    public Long getDptManager() {
+        return dptManagerId;
     }
 
-    public void setDptManager(String dptManager) {
-        this.dptManager = dptManager;
+    public void setDptManager(Long dptManagerId) {
+        this.dptManagerId = dptManagerId;
     }
 }

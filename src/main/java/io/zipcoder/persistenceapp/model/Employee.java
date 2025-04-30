@@ -26,11 +26,11 @@ public class Employee {
     @Column(name = "HIRE_DATE")
     private String hireDate;
     @Column(name = "MANAGER")
-    private String manager;
+    private Long managerId;
     @Column(name = "DPT_NUMBER")
     private String dptNumber;
 
-    public Employee(Long employeeNumber, String firstName, String lastName, String title, String phoneNumber, String email, String hireDate, String manager, String dptNumber) {
+    public Employee(Long employeeNumber, String firstName, String lastName, String title, String phoneNumber, String email, String hireDate, Long managerId, String dptNumber) {
         this.employeeNumber = employeeNumber;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -38,7 +38,7 @@ public class Employee {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.hireDate = hireDate;
-        this.manager = manager;
+        this.managerId = managerId;
         this.dptNumber = dptNumber;
     }
 
@@ -98,12 +98,12 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public String getManager() {
-        return manager;
+    public Long getManager() {
+        return managerId;
     }
 
-    public void setManager(String manager) {
-        this.manager = manager;
+    public void setManager(Long managerId) {
+        this.managerId = managerId;
     }
 
     public String getDptNumber() {
